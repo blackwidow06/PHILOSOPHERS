@@ -6,7 +6,7 @@
 /*   By: malavaud <malavaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/24 10:19:58 by malavaud          #+#    #+#             */
-/*   Updated: 2026/04/07 14:04:05 by malavaud         ###   ########.fr       */
+/*   Updated: 2026/05/25 10:11:50 by malavaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static int	handle_one_philo(t_philo *philo)
 	{
 		pthread_mutex_lock(philo->left_fork);
 		print_msg(philo, "has taken a fork");
-		usleep(philo->data->time_to_die * 1000);
+		smart_sleep(philo->data->time_to_sleep);
 		pthread_mutex_unlock(philo->left_fork);
 		return (1);
 	}

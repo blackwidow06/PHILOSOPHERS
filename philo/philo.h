@@ -6,7 +6,7 @@
 /*   By: malavaud <malavaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/02 15:13:22 by malavaud          #+#    #+#             */
-/*   Updated: 2026/04/07 14:08:12 by malavaud         ###   ########.fr       */
+/*   Updated: 2026/05/25 10:10:52 by malavaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ int		ft_atoi(const char *str);
 void	print_msg(t_philo *philo, char *msg);
 long	get_time(void);
 void	free_all(t_data *data, t_philo *philo);
+void	smart_sleep(long time);
 
 /*eat_utils*/
 void	take_forks(t_philo *philo);

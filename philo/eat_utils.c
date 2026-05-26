@@ -6,7 +6,7 @@
 /*   By: malavaud <malavaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/07 13:46:37 by malavaud          #+#    #+#             */
-/*   Updated: 2026/04/07 14:07:43 by malavaud         ###   ########.fr       */
+/*   Updated: 2026/05/25 10:11:05 by malavaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	eat_and_release(t_philo *philo)
 	philo->meals_eaten++;
 	pthread_mutex_unlock(&philo->meal_mutex);
 	print_msg(philo, "is eating");
-	usleep(philo->data->time_to_eat * 1000);
+	smart_sleep(philo->data->time_to_eat);
 	pthread_mutex_unlock(philo->left_fork);
 	pthread_mutex_unlock(philo->right_fork);
 }

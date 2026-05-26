@@ -78,3 +78,12 @@ void	free_all(t_data *data, t_philo *philo)
 	pthread_mutex_destroy(&data->stop_mutex);
 	free(philo);
 }
+
+void	smart_sleep(long time)
+{
+	long	start;
+
+	start = get_time();
+	while (get_time() - start < time)
+		usleep(500);
+}

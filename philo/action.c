@@ -6,7 +6,7 @@
 /*   By: malavaud <malavaud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 11:48:10 by malavaud          #+#    #+#             */
-/*   Updated: 2026/04/07 14:07:56 by malavaud         ###   ########.fr       */
+/*   Updated: 2026/05/25 10:11:22 by malavaud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_eat(t_philo *philo)
 void	ft_sleep(t_philo *philo)
 {
 	print_msg(philo, "is sleeping");
-	usleep(philo->data->time_to_sleep * 1000);
+	smart_sleep(philo->data->time_to_sleep);
 }
 
 void	ft_think(t_philo *philo)
